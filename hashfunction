@@ -1,12 +1,9 @@
-#include<bits/stdc++.h> 
-using namespace std;
-using ll=long long;
-ll Mod=1e9+7;
 ll get_hash(string s){
 ll h=0;
 for(auto ch:s)h=(h*31+ch-'a'+1)%Mod;
 return h;
 }
-int main(){
-cout<<get_hash("abacaba");
-}
+ void precompute_power(ll n){
+       power.resize(n+1,1);
+       for(ll i=1;i<=n;i++)power[i]=(power[i-1]*31)%MOD;
+    }
